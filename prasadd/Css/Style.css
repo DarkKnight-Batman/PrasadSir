@@ -1,0 +1,130 @@
+/* Reset and global styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-y: auto; /* Allows vertical scrolling */
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+header nav a {
+    color: skyblue;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Center content vertically and horizontally */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh; /* Ensures content fills the viewport */
+    max-width: 90vw;
+    padding-top: 350px; /* Adjust padding to position content */
+    overflow-y: auto; /* Allows scrolling within the content if it overflows */
+}
+
+/* Style the centered image */
+.centered-image {
+    max-width: 70%;
+    max-height: 30vh;
+    object-fit: contain;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+/* General page styling */
+.page {
+    display: flex;
+    min-height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* First page styling */
+#index-bg {
+    background: url('../images/king1.jpg') no-repeat center center/cover;
+    height: 100vh; /* Ensure full height */
+    width: 100vw; /* Ensure full width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#index-bg h1 {
+    font-size: 3em; /* Larger font for emphasis */
+    color: rgb(230, 212, 212);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6); /* Enhanced shadow for better visibility */
+}
+
+/* Background and text styling for the second page */
+#message-bg {
+    background: url('../images/wishesbgc.jpg') no-repeat center center/cover;
+    background-color: #333;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#message-bg h2 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #FFD700;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+}
+
+#message-bg p {
+    font-size: 1.5em;
+    max-width: 700px;
+    color: #fff;
+    line-height: 1.8;
+    margin: 0 auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    #message-bg h2 {
+        font-size: 2.5em;
+    }
+
+    #message-bg p {
+        font-size: 1.2em;
+    }
+
+    .centered-image {
+        max-height: 50vh;
+    }
+}

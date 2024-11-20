@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Wishes</title>
+    <link rel="stylesheet" href="./Css/Style.css">
+    <script>
+        // Function to show the wishes section and hide the index section
+        function showWishes() {
+            document.getElementById('index-bg').style.display = 'none'; // Hide index page
+            document.getElementById('message-bg').style.display = 'flex'; // Show wishes page
+        }
+
+        // Function to go back to the main page
+        function goToMain() {
+            document.getElementById('message-bg').style.display = 'none'; // Hide wishes page
+            document.getElementById('index-bg').style.display = 'flex'; // Show index page
+        }
+
+        window.onload = function() {
+            // Initially, show the index page and hide the wishes page
+            document.getElementById('message-bg').style.display = 'none';
+        };
+    </script>
+</head>
+<body>
+    <!-- First Page Section (Background Image with Click Event) -->
+    <section class="page" id="index-bg" onclick="showWishes()">
+        <h1>With great power comes great responsibility</h1>
+    </section>
+
+    <!-- Second Page Section (Wishes and Details) -->
+    <section class="page" id="message-bg">
+        <header>
+            <nav>
+                <a href="javascript:void(0);" onclick="goToMain()">Main</a>
+            </nav>
+        </header>
+        <div class="content">
+            <!-- Centered Image -->
+            <img src="./images/Prasad..png" alt="Birthday Celebration" class="centered-image">
+            <h2>Happy Birthday Wishes!</h2>
+            <p>Wishing you a fantastic year ahead, full of happiness, success, and wonderful memories. May all your dreams come true! <br><br>
+                As the Head of Operations, you have a special way of making the workplace calm and enjoyable for everyone. No matter what role someone has, you always make them feel at ease and comfortable. Your leadership brings everyone together and creates a positive atmosphere in the team. <br><br>
+                You truly live by the saying, "With great power comes great responsibility." Your dedication and hard work set an example for all of us, and we really appreciate everything you do to make work a better place for everyone. <br><br>
+                Enjoy your day, and here's to even more success and happiness in the year ahead!</p>
+        </div>
+    </section>
+</body>
+</html>
